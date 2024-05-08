@@ -1,0 +1,17 @@
+name: "kubeconform"
+description: "Validate deployment manifest."
+branding:
+  icon: 'anchor'  
+  color: 'blue'
+inputs:
+  args:
+    description: "Arguments of kubeconform"
+    required: true
+outputs:
+  result:
+    description: "Output of the kubeconform command run"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.args }}
