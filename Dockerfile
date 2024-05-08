@@ -6,4 +6,5 @@ RUN go install github.com/yannh/kubeconform/cmd/kubeconform@${kubeconform_versio
 
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
